@@ -5,7 +5,18 @@ namespace Itineris\GFCookieMonster;
 
 class CookieJar
 {
+    /**
+     * Prefix of the cookie names
+     *
+     * @var string
+     */
     protected $prefix;
+
+    /**
+     * The $_COOKIE
+     *
+     * @var string[]
+     */
     protected $cookie = [];
 
     public function __construct(string $prefix)
@@ -45,12 +56,13 @@ class CookieJar
 
     public function backupAndUnset(): void
     {
-        $this->cookie = array_filter(array_merge([], $_COOKIE), function ($_value, $key): bool {
-            return $this->isPrefixed($key);
+        $cookie = array_merge([], $_COOKIE); // Input var okay.
+        $this->cookie = array_filter($cookie, function ($_value, $key): bool {
+            return $this->isPrefixed($key); // phpcs:ignore
         }, ARRAY_FILTER_USE_BOTH);
 
         array_map(function (string $key): void {
-            unset($_COOKIE[$key]);
+            unset($_COOKIE[$key]); // Input var okay.
             setcookie(
                 $key,
                 '',

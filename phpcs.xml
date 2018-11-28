@@ -17,4 +17,12 @@
     </rule>
 
     <rule ref="Itineris"/>
+
+    <rule ref="WordPressVIPMinimum.VIP.RestrictedFunctions.cookies_setcookie">
+        <exclude-pattern>/src/CookieJar.php</exclude-pattern>
+    </rule>
+
+    <rule ref="WordPress.VIP.RestrictedVariables.cache_constraints___COOKIE">
+        <exclude-pattern>/src/CookieJar.php</exclude-pattern>
+    </rule>
 </ruleset>

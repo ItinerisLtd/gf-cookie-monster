@@ -5,6 +5,11 @@ namespace Itineris\GFCookieMonster;
 
 class Form
 {
+    /**
+     * The cookieJar instance
+     *
+     * @var CookieJar
+     */
     protected $cookieJar;
 
     public function __construct(CookieJar $cookieJar)
