@@ -3,7 +3,7 @@
  * Plugin Name:     GF Cookie Monster
  * Plugin URI:      https://www.itineris.co.uk/
  * Description:     Pre-populate Gravity Forms fields and hide query strings by cookies
- * Version:         0.0.0
+ * Version:         0.1.0
  * Author:          Itineris Limited
  * Author URI:      https://www.itineris.co.uk/
  * Text Domain:     gf-cookie-monster

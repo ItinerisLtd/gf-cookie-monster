@@ -16,7 +16,7 @@ Pre-populate Gravity Forms fields and hide query strings by cookies.
 - [Minimum Requirements](#minimum-requirements)
 - [Installation](#installation)
 - [FAQ](#faq)
-  - [Will you add support for insecure HTTP?](#will-you-add-support-for-insecure-http)
+  - [Can I access the cookies via JavaScript?](#can-i-access-the-cookies-via-javascript)
   - [Will you add support for older PHP versions?](#will-you-add-support-for-older-php-versions)
   - [It looks awesome. Where can I find some more goodies like this?](#it-looks-awesome-where-can-i-find-some-more-goodies-like-this)
   - [This plugin isn't on wp.org. Where can I give a ⭐️⭐️⭐️⭐️⭐️ review?](#this-plugin-isnt-on-wporg-where-can-i-give-a-%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F%EF%B8%8F-review)
