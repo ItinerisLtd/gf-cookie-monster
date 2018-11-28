@@ -41,6 +41,12 @@ Pre-populate Gravity Forms fields and hide query strings by cookies.
 $ composer require itinerisltd/gf-cookie-monster
 ```
 
+## Usage
+
+![Screenshot 1](./assets/screenshot-1.png)
+
+![Screenshot 2](./assets/screenshot-2.png)
+
 ## FAQ
 
 ### Can I access the cookies via JavaScript?
