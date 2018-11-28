@@ -1,0 +1,62 @@
+{
+    "name": "itinerisltd/gf-cookie-monster",
+    "type": "wordpress-plugin",
+    "description": "Pre-populate Gravity Forms fields and hide query strings by cookies",
+    "keywords": [
+        "gravityforms",
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://github.com/ItinerisLtd/gf-cookie-monster",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "hello@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "composer/installers": "^1.6"
+    },
+    "require-dev": {
+        "itinerisltd/itineris-wp-coding-standards": "^0.1.0",
+        "roave/security-advisories": "dev-master"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Itineris\\GFCookieMonster\\": "src/"
+        }
+    },
+    "scripts": {
+        "check-style": "phpcs --colors -p",
+        "pretag": [
+            "composer update --no-suggest",
+            "@check-style",
+            "composer normalize",
+            "npx doctoc README.md",
+            "github_changelog_generator --no-verbose"
+        ]
+    },
+    "support": {
+        "email": "hello@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/gf-cookie-monster/issues",
+        "source": "https://github.com/ItinerisLtd/gf-cookie-monster"
+    }
+}
