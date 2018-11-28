@@ -34,6 +34,7 @@ function run(): void
     $form = new Form($cookieJar);
 
     add_filter('init', [$cookieJar, 'backupAndUnset']);
+    add_filter('gform_confirmation_ui_settings', [$confirmation, 'displayHelpMessage']);
     add_filter('gform_confirmation', [$confirmation, 'transformRedirectUrl']);
     add_filter('gform_field_value', [$form, 'populateFields'], 10, 3);
 }

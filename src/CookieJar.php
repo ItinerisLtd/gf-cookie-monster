@@ -24,6 +24,11 @@ class CookieJar
         $this->prefix = $prefix;
     }
 
+    public function getPrefix(): string
+    {
+        return $this->prefix;
+    }
+
     public function set(string $key, string $value): void
     {
         setcookie(

@@ -42,6 +42,7 @@ class Confirmation
             $this->cookieJar->set($key, $value);
         }
     }
+
     protected function removeQueryString(string $url): string
     {
         $queries = $this->parseQueryString($url);
@@ -65,5 +66,20 @@ class Confirmation
         wp_parse_str($queryString, $queries);
 
         return $queries;
+    }
+
+    public function displayHelpMessage(array $uiSettings): array
+    {
+        $uiSettings['gf_cookie_monster'] = "
+        <tr>
+            <th><label for='gf_cookie_monster'>GF Cookie Monster</label></th>
+            <td>
+                <p name='gf_cookie_monster'>
+                    Prefix query string with <code>{$this->cookieJar->getPrefix()}</code> to <i>hide</i> it in cookies.
+                </p>
+            </td>
+        </tr>";
+
+        return $uiSettings;
     }
 }
